@@ -26,9 +26,8 @@ class DetailsScreen extends StatelessWidget {
               height: 300,
               child: CircleImage(imageUrl: article.urlToImage),
             ),
-            const SizedBox(
-              height: 5,
-            ),
+            Text(article.publishedAt),
+            const SizedBox(height: 20),
             Center(
               child: Text(
                 article.title,

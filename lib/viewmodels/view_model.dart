@@ -11,9 +11,10 @@ class ViewModel {
   String get description => _modelNewsArticle.description;
   String get url => _modelNewsArticle.url;
   String get urlToImage => _modelNewsArticle.urlToImage;
+
   String get publishedAt {
-    final datetime = DateFormat('yyyy-MM-dd hh:mm')
+    final dateTime = DateFormat('yyyy-mm-ddTHH:mm:ssZ')
         .parse(_modelNewsArticle.publishedAt, true);
-    return DateFormat.yMMMMEEEEd("en-us").format(datetime);
+    return DateFormat.yMMMMEEEEd('en-us').format(dateTime);
   }
 }
